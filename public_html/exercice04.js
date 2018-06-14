@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 
-function exercice04() {
-
-    var message = "ceci est un texte assez long";
+function exercice04()
+{
+    var message = "this is a long text";
     console.log(motTableau(message));
     console.log(positionTab(message));
     
     
-//var position = [];
+	//var position = [];
     //var nbSpace = " ";
     //var nbChar = 0;
 

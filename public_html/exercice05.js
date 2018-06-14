@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
-function exercice05() {
+function exercice05()
+{
     
 }

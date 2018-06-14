@@ -4,35 +4,37 @@
  * and open the template in the editor.
  */
 
-function exercice03() {
+function exercice03()
+{
+    var message = "This is a long text";
+    var length = getStringLength(message);
+    var tab = []; //my message is in a tab
+    var dash = [];//tab 
+    var sentence = "";
 
-    var message = "ceci est un texte assez long";
-    var longueur = getStringLength(message);
-    var tableau = []; //mon message est dans un tableau
-    var tiret = [];//tableau pour
-    var phrase = "";
+    for(var i = 0; i < length; i++)
+    {
+        //Replace all «e» by «E»
+        if(message[i] == "e"){
+            tab[i] = 'E';
+        //Replace all spaces by dashes
+        }else if(message[i] == " "){
+            tab[i] = '-';
 
-    for (var i = 0; i < longueur; i++) {
-        //Remplacez tous les «e»par des «E»
-        if (message[i] == "e") {
-            tableau[i] = 'E';
-        //Remplacez tous les espaces par des tirets.
-        } else if (message[i] == " ") {
-            tableau[i] = '-';
-
-        } else {
-            tableau[i] = message[i];
+        }else{
+            tab[i] = message[i];
         }
-        //concaténation pour écrire la phrase depuis le tableau
-        phrase = phrase + tableau[i];
-        //phrase += tableau[i]; (celle à faire)
+        //Concatenation to write sentence from the tab
+        sentence = sentence + tab[i];
+        //sentence += tab[i]; 
 
-        //Changer la première lettre de chaque mot par une majuscule.
-        if (message[i] == " ") {
+        //Change each word's first letter by upper case
+        if(message[i] == " "){
         }
     }
-    console.log(tableau);
-    console.log(phrase);
+    
+    console.log(tab);
+    console.log(sentence);
     console.log(camelCase(message));
 }
 

@@ -4,31 +4,33 @@
  * and open the template in the editor.
  */
 
-function writeNewDiv() {
+function writeNewDiv()
+{
     var div = document.getElementById("exoXX");
-    var resultatDeLExo = "texte qui va bien";
-    var texte = document.createTextNode(resultatDeLExo);
-    div.appendChild(texte);
+    var resultExo = "text here as you prefer";
+    var text = document.createTextNode(resultExo);
+    div.appendChild(text);
 }
 
-//Obtenir la longueur d'un mot
-function getStringLength(chaine) {
-    var longueur = 0;
-    while (true) {
-        if (chaine[longueur] !== undefined) {
-            longueur++;
-        } else {
+//Get word length
+function getStringLength(string) {
+    var length = 0;
+    while(true)
+    {
+        if(string[length] !== undefined){
+            length++;
+        }else{
             break;
         }
     }
-    return longueur;
+    return length;
 }
 
 
-function camelCase(pMessage) {
+function camelCase(pMessage){
 
-    var longueur = getStringLength(pMessage);
-    var newChaine = [];
+    var length = getStringLength(pMessage);
+    var newString = [];
     var concat = "";
     var tabEquiv = {
         'a': 'A',
@@ -57,20 +59,21 @@ function camelCase(pMessage) {
         'x': 'X',
         'y': 'Y',
         'z': 'Z'
-    }; //instruction avec";"
+    }; //instruction with ";"
     console.log(pMessage);
-    for (var i = 0; i < longueur; i++) {
 
-        if (i == 0) {
-            newChaine[i] = tabEquiv[pMessage[i]];
-            //gestion des espaces antérieur au caractère 
-        } else if (pMessage[i - 1] == " ") {
-            newChaine[i] = tabEquiv[pMessage[i]];
-        } else {
-            newChaine[i] = pMessage[i];
+    for(var i = 0; i < length; i++)
+    {
+        if(i == 0){
+            newString[i] = tabEquiv[pMessage[i]];
+            //manage spaces antérieur au caractère 
+        }else if(pMessage[i - 1] == " "){
+            newString[i] = tabEquiv[pMessage[i]];
+        }else{
+            newString[i] = pMessage[i];
         }
-        //concaténation dans la boucle (phrase reconstituée)
-        concat = concat + newChaine[i];
+        //concatenation in the loop 
+        concat = concat + newString[i];
     }
     return(concat);
 }
@@ -86,38 +89,37 @@ function camelCase(pMessage) {
  }
  }*/
 
-//mettre valeur (ici mots) dans un tableau
+//the word in the tab
 function motTableau(pMessage) {
 
 
-    var longueur = getStringLength(pMessage);
-    var tableau = [];
+    var length = getStringLength(pMessage);
+    var tab = [];
     var newWord = "";
 
-    for (var i = 0; i <= longueur; i++) {
-
-
-        if (pMessage[i] == " " || pMessage[i] === undefined) {
-            tableau.push(newWord);
+    for(var i = 0; i <= length; i++)
+    {
+        if(pMessage[i] == " " || pMessage[i] === undefined){
+            tab.push(newWord);
             newWord = "";
-        } else {
+        }else{
             newWord += pMessage[i];
         }
     }
-    return(tableau);
+    return(tab);
 }
 
-function positionMot(pMessage) {
-
+function positionMot(pMessage)
+{
     var counterPos = 0;
-    var longueur = getStringLength(pMessage);
-    var tableauAssos = {};
+    var length = getStringLength(pMessage);
+    var tabAssos = {};
 
-    for (var i = 0; i <= longueur; i++) {
-        
+    for(var i = 0; i <= length; i++)
+    {
         if (pMessage[i] == " " || pMessage[i] === undefined) {
             counterPos++;
-            tableauAssos.newWord=counterPos;
+            tabAssos.newWord=counterPos;
             newWord = "";
         }else{
             newWord += pMessage[i];
