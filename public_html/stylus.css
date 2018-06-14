@@ -8,3 +8,10 @@ and open the template in the editor.
     Author     : lucie2
 */
 
+button{
+    background-color: black; 
+    color: greenyellow;
+    width: 100px;
+    height: 35px;
+}
+

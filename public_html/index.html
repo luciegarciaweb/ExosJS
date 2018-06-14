@@ -9,10 +9,73 @@ and open the template in the editor.
         <title>Exos-en-vrac</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="stringFunctions.js" type="text/javascript"></script> 
+        <script src="exercice01.js" type="text/javascript"></script> 
+        <script src="exercice02.js" type="text/javascript"></script>
+        <script src="exercice03.js" type="text/javascript"></script>
+        <script src="exercice04.js" type="text/javascript"></script>
+        <script src="exercice05.js" type="text/javascript"></script>
+        <script src="exercice06.js" type="text/javascript"></script>
         <link rel="stylesheet" href="stylus.css">
-        
+
     </head>
     <body>
-        <script> </script>
+        <!--    template
+        <div class="exercice hidden"> </div>
+        <h3>Exercices alpha1</h3>
+        <div class="resultat"> </div>
+        <button onclick="'exerciceXX()'">run</button>
+        -->
+        <div class="exercice"> 
+            <h3>Exercices 01</h3>
+            <div class="resultat" id="exo01"> </div>
+            <button type="button" onclick="exercice01()">run</button>
+        </div>
+<script type="text/javascript">
+    function exercice01() {
+    var message = ("hello world!");
+    var taille = getStringLength(message);
+    for (var i = 0; i < taille; i++) {
+        console.log(i+ " " + message[i]);
+    }
+}
+</script>
+
+        <div class="exercice "> 
+            <h3>Exercices 02</h3>
+            <div class="resultat" id="exo02"> </div>
+            <button onclick="exercice02()">run</button>
+        </div>
+
+        <div class="exercice "> 
+            <h3>Exercices 03</h3>
+            <div class="resultat" id="exo03"> </div>
+            <button onclick="exercice03()">run</button>
+        </div>
+
+        <div class="exercice"> 
+            <h3>Exercices 04</h3>
+            <div class="resultat" id="exo04"> </div>
+            <button onclick="exercice04()">run</button>
+        </div>
+
+        <div class="exercice"> 
+            <h3>Exercices 05</h3>
+            <div class="resultat" id="exo05"> </div>
+            <button onclick="exercice05()">run</button>
+        </div>
+
+        <div class="exercice"> 
+            <h3>Exercices 06</h3>
+            <div class="resultat" id="exo06"> </div>
+            <button onclick="exercice06()">run</button>
+        </div>
+        <!--
+                <div class="exercice hidden"> </div>
+                <h3>Exercices alpha1</h3>
+                <div class="resultat"> </div>
+                <button onclick="'exerciceXX()'">run</button>
+        -->
+
     </body>
 </html>
